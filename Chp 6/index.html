@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chp 6</title>
+</head>
+<body>
+<script>
+
+//q1
+
+let a = 10
+result = a;
+document.write("Result : <br> The value of a is :",a);
+document.write(" <br> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ <br>")
+result++;
+document.write("The value of ++a is :",result,"<br>" );
+document.write("Now the value of a is :",result, "<br>","<br>","<br>" );
+document.write("The value of a++ is :",result,"<br>" );
+result++;
+document.write("Now the value of a is :",result, "<br>","<br>","<br>" );
+result--;
+document.write("The value of --a is :",result,"<br>" );
+document.write("Now the value of a is :",result, "<br>","<br>","<br>" );
+document.write("The value of a-- is :",result,"<br>" );
+result--;
+document.write("Now the value of a is :",result, "<br>","<br>","<br>" );
+
+//q2 
+
+let c = 2;
+let d = 1;
+document.write("a is : ",c,"<br>");
+document.write("b is : ",d,"<br>");
+document.write("The result is : ",--c - --d + ++c + d--,"<br>");
+
+//q3
+
+let name = prompt("What's your name ");
+document.write("Welcome greetings ","<br>");
+
+//q5
+let number = prompt("Write a table number ");
+
+function table(number) {
+    for (let i = 1; i <= 10; i++) {
+        let result = i * number;
+        document.write(`${number} x ${i} = ${result}<br>`);
+    }
+    document.write("<br>");
+}
+
+if (isNaN(number)) {
+    document.write("Not a valid number. Displaying the default table (5)<br>");
+    table(5);
+} else {
+    table(Number(number));
+}
+
+//q6
+
+
+let subject1 = prompt("Enter the name of subject 1");
+let subject2 = prompt("Enter the name of subject 2");
+let subject3 = prompt("Enter the name of subject 3");
+
+
+let totalMarks = 100;
+
+let obtainedMarks1 = parseFloat(prompt(`Enter obtained marks for ${subject1}`));
+let obtainedMarks2 = parseFloat(prompt(`Enter obtained marks for ${subject2}`));
+let obtainedMarks3 = parseFloat(prompt(`Enter obtained marks for ${subject3}`));
+
+let totalObtainedMarks = obtainedMarks1 + obtainedMarks2 + obtainedMarks3;
+let percentage = (totalObtainedMarks / (3 * totalMarks)) * 100;
+
+
+document.write("<table border='1'>");
+document.write("<tr><th>Subject</th><th>Total Marks</th><th>Obtained Marks</th></tr>");
+document.write(`<tr><td>${subject1}</td><td>${totalMarks}</td><td>${obtainedMarks1}</td></tr>`);
+document.write(`<tr><td>${subject2}</td><td>${totalMarks}</td><td>${obtainedMarks2}</td></tr>`);
+document.write(`<tr><td>${subject3}</td><td>${totalMarks}</td><td>${obtainedMarks3}</td></tr>`);
+document.write("</table>");
+
+document.write("<br>");
+document.write(`Total Obtained Marks: ${totalObtainedMarks}<br>`);
+document.write(`Percentage: ${percentage.toFixed(2)}%`);
+
+
+        
+
+
+
+
+
+</script>
+</body>
+</html>
